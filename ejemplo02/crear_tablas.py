@@ -85,7 +85,7 @@ class Parroquia(Base):
         jornadas = []
         for i in self.establecimientos:
             jornadas.append(i.jornada)
-        return jornadas
+        return list(set(jornadas))
 
 
 class Establecimiento(Base):
